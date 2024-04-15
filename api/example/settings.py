@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
-    'server',
+    #'server',
 ]
 
 MIDDLEWARE = [
@@ -77,9 +77,10 @@ WSGI_APPLICATION = 'example.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': 'test',
-        'USER': 'geodjango',
+        "ENGINE": "django.contrib.gis.db.backends.postgis",
+        "NAME": "test",
+        "USER": "geodjango",
+        'PASSWORD': 'geodjango',
     }
 }
 
