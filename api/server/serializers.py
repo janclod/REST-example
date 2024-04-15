@@ -1,9 +1,11 @@
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
-from models import Municipality
+from .models import Municipality
 
-class LocationSerializer(GeoFeatureModelSerializer):
+
+class MunicipalitySerializer(GeoFeatureModelSerializer):
     """ A class to serialize locations as GeoJSON compatible data """
 
     class Meta:
         model = Municipality
-        geo_field = "multipolygon"
+        geo_field = "coordinates"
+        fields = ('id', 'name')
