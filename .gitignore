@@ -42,3 +42,6 @@ venv/
 
 # File-based project format
 *.iws
+
+# custom
+example.json
