@@ -1,6 +1,6 @@
 ## REST API
 
-Basic example of REST API able to consume and return geospatial data.
+Basic example of REST API to consume and return geospatial data.
 
 ## How to build
 
@@ -23,9 +23,12 @@ Launch script or example post/get request.
 ## TODO
  
 Essentials
-- build basic API
-- introduce specific data type
-- implement get and post
+- build basic API - DONE
+- introduce specific data type - DONE
+- implement get and post - DONE
+- create script for pushing data to API -
+- introduce paging -
+- introduce bboxes -
 - etc.
 
 Extra
