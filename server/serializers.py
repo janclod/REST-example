@@ -1,5 +1,5 @@
 from rest_framework_gis.serializers import GeoFeatureModelSerializer
-from .models import Municipality
+from server.models import Municipality
 
 
 class MunicipalitySerializer(GeoFeatureModelSerializer):
