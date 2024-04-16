@@ -24,12 +24,11 @@ Launch script or example post/get request.
  
 Essentials
 - build basic API - DONE
-- introduce specific data type - DONE
-- implement get and post - DONE
+- introduce specific data model/serializer (GeoJSON FeatureObject) - DONE
+- implement get/post/put/delete - DONE
 - create script for pushing data to API -
-- introduce paging -
+- introduce paging - DONE
 - introduce bboxes -
-- etc.
 
 Extra
 
