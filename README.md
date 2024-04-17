@@ -8,7 +8,7 @@ Basic example of REST API to consume and return geospatial data.
 
 #### Python env
 
-You require Python to install and run this project.
+You require Python (with venv) to install this project.
 
 See: [Python guide](https://docs.python-guide.org/starting/install3/linux/)
 
