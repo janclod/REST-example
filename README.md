@@ -10,6 +10,10 @@ Basic example of REST API to consume and return geospatial data.
 
 You require Python (with venv) to install this project.
 
+On Ubuntu:
+
+```sudo apt install python3 python-is-python3 python3.10-venv python3-pip```
+
 See: [Python guide](https://docs.python-guide.org/starting/install3/linux/)
 
 #### Database backend
@@ -20,7 +24,7 @@ The Postgresql instance must be reachable from the location where the app is run
 
 The Postgresql instance must have a username `geodjango` (password `geodjango`).
 
-The Postgresql instance must contain a DB named `test`.
+The Postgresql instance must contain a DB named `test` with postgis extension (more info [here](https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/postgis/)).
 
 The `geodjango` username must own the `test` DB and have create/read/write rights.
 
@@ -38,9 +42,12 @@ Download the app code from GitHub:
 
 ```git clone https://github.com/janclod/REST-example.git``` 
 
-Move to the repository directory and create a virtual env:
+Move to the repository directory and set up virtual env:
 
-```python -m venv```
+```
+python -m venv .
+python -m venv activate
+```
 
 Install deps:
 
@@ -54,7 +61,7 @@ Launch the app:
 
 ```python manage.py runserver```
 
-Load the data:
+Load the data (in a new terminal):
 
 ```python load.py```
 
