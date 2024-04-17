@@ -44,4 +44,5 @@ venv/
 *.iws
 
 # custom
-example.json
+multipoly.json
+multipoly_actual_one.json
