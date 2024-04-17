@@ -27,7 +27,32 @@ The `geodjango` username must own the `test` DB and have create/read/write right
 - requests
 - psycopg2
 
-### Step-by-step (for developers)
+### Step-by-step installation (for developers)
 
-Download, install deps, run server, migrate.
-Launch script or example post/get request.
+Download the app code from GitHub:
+
+```git clone https://github.com/janclod/REST-example.git``` 
+
+Move to the repository directory and create a virtual env:
+
+```python -m venv```
+
+Install deps:
+
+```python -m pip install -r requirements.txt```
+
+Run the first migration to create the right tables:
+
+```python manage.py migrate```
+
+Launch the app:
+
+```python manage.py runserver```
+
+Load the data:
+
+```python load.py```
+
+Enjoy visiting the freshly installed app in the web browser by visiting:
+
+```http://127.0.0.1:8000/municipalities/```
