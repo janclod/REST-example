@@ -6,6 +6,12 @@ Basic example of REST API to consume and return geospatial data.
 
 ### Requirements
 
+#### Python env
+
+You require Python to install and run this project.
+
+See: [Python guide](https://docs.python-guide.org/starting/install3/linux/)
+
 #### Database backend
 
 Need to have a running instance of Postgresql.
@@ -20,7 +26,6 @@ The `geodjango` username must own the `test` DB and have create/read/write right
 
 #### Python packages
 
-- python
 - django
 - rest_framework
 - rest_framework_gis
