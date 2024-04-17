@@ -6,8 +6,11 @@ Basic example of REST API to consume and return geospatial data.
 
 ### Requirements
 
-- Python
-- etc.
+- Python3
+- django 5
+- rest_framework
+- rest_framework_gis
+- requests
 
 ### Step-by-step (for developers)
 
