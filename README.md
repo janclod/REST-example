@@ -46,7 +46,7 @@ Move to the repository directory and set up virtual env:
 
 ```
 python -m venv .
-python -m venv activate
+source ./bin/activate
 ```
 
 Install deps:
