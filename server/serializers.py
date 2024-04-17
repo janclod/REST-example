@@ -8,4 +8,5 @@ class MunicipalitySerializer(GeoFeatureModelSerializer):
     class Meta:
         model = Municipality
         geo_field = "coordinates"
+        auto_bbox = True
         fields = ('id', 'name')
