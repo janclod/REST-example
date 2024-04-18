@@ -7,11 +7,11 @@ from rest_framework_gis.filters import InBBoxFilter
 
 class MunicipalityList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView):
     """
-    List all municipalities, or create a new municipality.
+    List all municipalities, or create new municipality(ies).
     """
     queryset = Municipality.objects.all()
     serializer_class = MunicipalitySerializer
-    bbox_filter_field = 'geometry'
+    bbox_filter_field = 'coordinates'
     filter_backends = (InBBoxFilter,)
 
     def get(self, request, *args, **kwargs):
