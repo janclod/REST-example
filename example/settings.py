@@ -80,9 +80,9 @@ WSGI_APPLICATION = 'example.wsgi.application'
 DATABASES = {
     'default': {
         "ENGINE": "django.contrib.gis.db.backends.postgis",
-        "NAME": "test",
-        "USER": "geodjango",
-        'PASSWORD': 'geodjango',
+        "NAME": "postgres",
+        "USER": "postgres",
+        "PASSWORD": "postgres",
         "HOST": "db",  # set in docker-compose.yml
         "PORT": 5432,  # default postgres port
     }
