@@ -58,11 +58,11 @@ Need to have a running instance of Postgresql.
 
 The Postgresql instance must be reachable from the location where the app is running on standard port (`5432`).
 
-The Postgresql instance must have a username `geodjango` (password `geodjango`).
+The Postgresql instance must have a standard username `postgres` (password `postgres`).
 
-The Postgresql instance must contain a DB named `test` with postgis extension.
+The Postgresql instance must contain a DB named `db` with postgis extension.
 
-The `geodjango` username must own the `test` DB and have create/read/write rights.
+The `postgres` username must own the `db` DB and have create/read/write rights.
 
 See:  [Django guide](https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/postgis/)
 
