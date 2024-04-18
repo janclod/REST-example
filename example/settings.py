@@ -84,6 +84,7 @@ DATABASES = {
         "USER": "geodjango",
         'PASSWORD': 'geodjango',
         "HOST": "db",  # set in docker-compose.yml
+        "PORT": 5432,  # default postgres port
     }
 }
 
