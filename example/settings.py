@@ -83,6 +83,7 @@ DATABASES = {
         "NAME": "test",
         "USER": "geodjango",
         'PASSWORD': 'geodjango',
+        "HOST": "db",  # set in docker-compose.yml
     }
 }
 
