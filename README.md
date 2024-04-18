@@ -69,4 +69,8 @@ Load the data (in a new terminal, requires running app from previous step):
 
 Enjoy visiting the freshly installed app in the web browser by visiting:
 
-```http://127.0.0.1:8000/municipalities/```
+```http://127.0.0.1:8000/municipalities/?format=json```
+
+You can also filter municipalities using a bounding box:
+
+```http://127.0.0.1:8000/municipalities/?in_bbox=4,6,50,60&format=json```
