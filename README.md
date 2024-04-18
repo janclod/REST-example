@@ -1,8 +1,44 @@
-## REST API
+# REST API
 
 Basic example of REST API to consume and return geospatial data.
 
-## How to build
+# How to build
+
+## Docker
+
+### Requirements
+
+#### Docker env
+
+[Follow the instructions here to install Docker on Win](https://docs.docker.com/desktop/install/windows-install/)
+
+### Step-by-step installation
+
+Download the app code from GitHub:
+
+```git clone https://github.com/janclod/REST-example.git``` 
+
+Move to the repository directory (`cd ./REST-example`) and spin up Docker container:
+
+```docker-compose up -d --build```
+
+Perform first migration:
+
+```docker-compose exec web python manage.py migrate```
+
+Load the data into the DB:
+
+```docker-compose exec web python load.py```
+
+Enjoy visiting the freshly installed app in the web browser by visiting:
+
+```http://127.0.0.1:8000/municipalities/?format=json```
+
+You can also filter municipalities using a bounding box:
+
+```http://127.0.0.1:8000/municipalities/?in_bbox=4,6,50,60&format=json```
+
+## Local Python environment
 
 ### Requirements
 
