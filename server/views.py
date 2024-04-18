@@ -2,13 +2,17 @@ from server.models import Municipality
 from server.serializers import MunicipalitySerializer
 from rest_framework import mixins
 from rest_framework import generics
+from rest_framework_gis.filters import InBBoxFilter
+
 
 class MunicipalityList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.GenericAPIView):
     """
-    List all municipalities, or create a new municipality.
+    List all municipalities, or create new municipality(ies).
     """
     queryset = Municipality.objects.all()
     serializer_class = MunicipalitySerializer
+    bbox_filter_field = 'coordinates'
+    filter_backends = (InBBoxFilter,)
 
     def get(self, request, *args, **kwargs):
         return self.list(request, *args, **kwargs)
@@ -16,7 +20,9 @@ class MunicipalityList(mixins.ListModelMixin, mixins.CreateModelMixin, generics.
     def post(self, request, *args, **kwargs):
         return self.create(request, *args, **kwargs)
 
-class MunicipalityDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin, generics.GenericAPIView):
+
+class MunicipalityDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin, mixins.DestroyModelMixin,
+                         generics.GenericAPIView):
     """
     Retrieve, update or delete a municipality instance.
     """
@@ -31,4 +37,3 @@ class MunicipalityDetail(mixins.RetrieveModelMixin, mixins.UpdateModelMixin, mix
 
     def delete(self, request, *args, **kwargs):
         return self.destroy(request, *args, **kwargs)
-
