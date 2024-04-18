@@ -24,9 +24,11 @@ The Postgresql instance must be reachable from the location where the app is run
 
 The Postgresql instance must have a username `geodjango` (password `geodjango`).
 
-The Postgresql instance must contain a DB named `test` with postgis extension (more info [here](https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/postgis/)).
+The Postgresql instance must contain a DB named `test` with postgis extension.
 
 The `geodjango` username must own the `test` DB and have create/read/write rights.
+
+See:  [Django guide](https://docs.djangoproject.com/en/5.0/ref/contrib/gis/install/postgis/)
 
 #### Python packages
 
@@ -42,7 +44,7 @@ Download the app code from GitHub:
 
 ```git clone https://github.com/janclod/REST-example.git``` 
 
-Move to the repository directory and set up virtual env:
+Move to the repository directory (`cd ./REST-example`) and set up virtual env:
 
 ```
 python -m venv .
@@ -61,7 +63,7 @@ Launch the app:
 
 ```python manage.py runserver```
 
-Load the data (in a new terminal):
+Load the data (in a new terminal, requires running app from previous step):
 
 ```python load.py```
 
